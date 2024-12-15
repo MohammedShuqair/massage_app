@@ -146,7 +146,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                     showSpinner = true;
                   });
                   try {
-                    final user = await _auth.signInWithEmailAndPassword(
+                    final user = await _auth.createUserWithEmailAndPassword(
                         email: email, password: password);
                     if (user != null) {
                       Navigator.pushNamed(context, ChatScreen.screenRoute);
